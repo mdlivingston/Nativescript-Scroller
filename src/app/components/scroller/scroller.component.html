@@ -1,0 +1,16 @@
+<StackLayout>
+
+    <StackLayout class="header-holder" #headerView height="35">
+        <Label class="header center" [text]="title"></Label>
+    </StackLayout>
+
+    <ScrollView #scrollView (scroll)="onScroll($event, scrollView, topView, headerView)">
+
+        <StackLayout width="100%" backgroundColor="white" padding="10">
+            <Label #topView class="title " [text]="title"></Label>
+            <ng-content></ng-content>
+        </StackLayout>
+
+    </ScrollView>
+
+</StackLayout>
