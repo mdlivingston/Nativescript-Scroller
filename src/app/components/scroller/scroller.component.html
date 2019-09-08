@@ -6,7 +6,7 @@
 
     <ScrollView #scrollView (scroll)="onScroll($event, scrollView, topView, headerView)">
 
-        <StackLayout width="100%" backgroundColor="white" padding="10">
+        <StackLayout width="100%" padding="10">
             <Label #topView class="title " [text]="title"></Label>
             <ng-content></ng-content>
         </StackLayout>
